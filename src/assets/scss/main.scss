@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Add your styles here */
+
+body {
+  @apply bg-gradient-to-b from-blue-400 to-indigo-600 min-h-screen flex items-center justify-center;
+}
+
+h1 {
+  @apply text-3xl font-semibold mb-6;
+}
+
+p {
+  @apply text-gray-600 mb-6;
+}
+
+a {
+  @apply bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full;
+}

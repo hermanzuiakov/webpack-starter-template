@@ -28,11 +28,11 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader'],
             },
             {
                 test: /\.js$/,
@@ -47,7 +47,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
-            },
+            }
         ],
     },
     plugins: [
@@ -57,7 +57,7 @@ module.exports = {
             template: "src/template.html",
         }),
         new MiniCssExtractPlugin({
-            filename: "styles.css",
+            filename: "css/[name][contenthash].css", // CSS файлы будут сохранены в папке "css"
         }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
