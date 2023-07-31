@@ -1,0 +1,19 @@
+.idea/
+
+# Node.js
+node_modules/
+dist/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs and databases
+*.log
+*.sqlite
