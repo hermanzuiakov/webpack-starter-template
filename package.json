@@ -5,6 +5,10 @@
   "repository": "https://github.com/hermanzuiakov/webpack-starter-template.git",
   "author": "hermanzuiakov <herman.zuiakov@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --open",
+    "build": "webpack"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
@@ -22,7 +26,8 @@
     "tailwindcss": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "webpack-bundle-analyzer": "^4.9.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
