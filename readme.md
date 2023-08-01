@@ -57,11 +57,11 @@ To run the project in development mode with live reloading, use the following co
 
 ### Using Yarn
 ```
-yarn start
+yarn run dev
 ```
 ### Using npm
 ```
-npm start
+npm run dev
 ```
 
 The development server will start, and you can access the project at http://localhost:3000.
