@@ -21,13 +21,13 @@ The Webpack Starter Template is a minimalistic and ready-to-use project template
 ## Installation
 
 1. Clone the repository:
-
+```
 git clone https://github.com/hermanzuiakov/webpack-starter-template.git
-
+```
 2. Navigate to the project folder:
-
+```
 cd your-repo
-
+```
 3. Install dependencies using Yarn or npm:
 
 ### Using Yarn
