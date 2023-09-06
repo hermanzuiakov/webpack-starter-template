@@ -1,7 +1,8 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true,
+        es2022: true,
+        node: true,
     },
     extends: 'eslint:recommended',
     parserOptions: {
@@ -10,7 +11,7 @@ module.exports = {
     },
     rules: {
         // Indentation: use either 2 or 4 spaces (replace with your preference)
-        'indent': ['error', 2],
+        'indent': ['error', 4],
 
         // Single quotes for strings
         'quotes': ['error', 'single'],
