@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')["BundleAnalyzerPlugin"];
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -77,6 +77,11 @@ module.exports = {
             title: 'Webpack Starter Template',
             filename: 'index.html',
             template: 'src/template.html',
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Docs - Webpack Starter Template',
+            filename: 'docs.html',
+            template: 'src/docs.html',
         }),
         // Extract CSS into separate files in production mode
         new MiniCssExtractPlugin({

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="documentation p-6">
+    <h1 class="text-3xl font-semibold mb-4 text-white">
+        Mixins Documentation
+
+        <a class="btn" href="/">Return to Home</a>
+    </h1>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="#typography">Typography</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#grid">Grid</a>
+        <a href="#animations">Animations</a>
+        <a href="#transitions">Transitions</a>
+        <a href="#shadows">Shadows</a>
+        <a href="#gradients">Gradients</a>
+        <a href="#border-radius">Border Radius</a>
+        <a href="#flexbox">Flexbox</a>
+        <a href="#positioning">Positioning</a>
+        <a href="#fonts">Fonts</a>
+        <a href="#media-queries">Media Queries</a>
+    </div>
+
+    <!-- Typography Mixins -->
+    <div id="typography" class="section">
+        <h2 class="text-xl font-semibold text-white">Typography Mixins</h2>
+        <p class="mt-2">Mixins for controlling font styles.</p>
+        <pre>
+            <code class="language-scss">
+@import 'typography';
+
+.example {
+    @include font-size(16px); /* Example usage */
+    @include font-weight(700); /* Example usage */
+    @include text-color(#333); /* Example usage */
+    @include font-size-rem(14px);
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Button Mixins -->
+    <div id="buttons" class="section">
+        <h2 class="text-xl font-semibold">Button Mixins</h2>
+        <p class="mt-2">Mixins for creating styled buttons.</p>
+        <pre>
+            <code class="language-scss">
+@import 'buttons';
+
+.example {
+    @include button-style; /* Example usage */
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Grid Mixins -->
+    <div  id="grid" class="section">
+        <h2 class="text-xl font-semibold">Grid Mixins</h2>
+        <p class="mt-2">Mixins for creating grid layouts.</p>
+        <pre>
+            <code class="language-scss">
+@import 'grid';
+
+.example {
+    @include grid(3, 20px); /* Example usage */
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Animation Mixins -->
+    <div id="animations" class="section">
+        <h2 class="text-xl font-semibold">Animation Mixins</h2>
+        <p class="mt-2">Mixins for adding animations to elements.</p>
+        <pre>
+            <code class="language-scss">
+@import 'animations';
+
+.example {
+    @include blink-animation; /* Example usage */
+    @include pulse-animation; /* Example usage */
+    @include move-animation(1s, 2s); /* Example usage */
+    @include rotate-animation(2s); /* Example usage */
+    @include background-color-animation(2s); /* Example usage */
+
+
+    // Define animation name, and properties
+    @include keyframes(fade-out) {
+      0% { opacity: 1; }
+      90% { opacity: 0; }
+    }
+    // Add animation to element
+    .element {
+      width: 100px;
+      height: 100px;
+      background: black;
+      @include animation('fade-out 5s 3');
+    }
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Transition Mixins -->
+    <div id="transitions" class="section">
+        <h2 class="text-xl font-semibold">Transition Mixins</h2>
+        <p class="mt-2">Mixins for creating smooth transitions.</p>
+        <pre>
+            <code class="language-scss">
+@import 'transitions';
+
+.example {
+    @include transition(all 0.3s); /* Example usage */
+    @include height-transition(0.5s); /* Example usage */
+    @include width-transition(0.3s); /* Example usage */
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Shadow Mixins -->
+    <div id="shadows" class="section">
+        <h2 class="text-xl font-semibold">Shadow Mixins</h2>
+        <p class="mt-2">Mixins for applying box shadows.</p>
+        <pre>
+            <code class="language-scss">
+@import 'shadows';
+
+.example {
+    @include box-shadow(2px 2px 4px #888); /* Example usage */
+    @include text-shadow(1px 1px 2px #333); /* Example usage */
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Gradient Mixins -->
+    <div id="gradients" class="section">
+        <h2 class="text-xl font-semibold">Gradient Mixins</h2>
+        <p class="mt-2">Mixins for creating gradient backgrounds.</p>
+        <pre>
+            <code class="language-scss">
+@import 'gradients';
+
+.example {
+    @include horizontal-gradient(#3498db, #e74c3c); /* Example usage */
+    @include vertical-gradient(#27ae60, #f39c12); /* Example usage */
+
+    .foo {
+      @include background-gradient(red, black, 'vertical');
+    }
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Border Radius Mixins -->
+    <div id="border-radius" class="section">
+        <h2 class="text-xl font-semibold">Border Radius Mixins</h2>
+        <p class="mt-2">Mixins for rounding element corners.</p>
+        <pre>
+            <code class="language-scss">
+@import 'border-radius';
+
+.example {
+    @include border-radius(10px); /* Example usage */
+    @include circle(50px); /* Example usage */
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Flexbox Mixins -->
+    <div id="flexbox" class="section">
+        <h2 class="text-xl font-semibold">Flexbox Mixins</h2>
+        <p class="mt-2">Mixins for flexbox layouts.</p>
+        <pre>
+            <code class="language-scss">
+@import 'flexbox';
+
+.example {
+    @include flex-container(column, center, center); /* Example usage */
+    @include flex-item(2); /* Example usage */
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Positioning Mixins -->
+    <div id="positioning" class="section">
+        <h2 class="text-xl font-semibold">Positioning Mixins</h2>
+        <p class="mt-2">Mixins for positioning elements.</p>
+        <pre>
+            <code class="language-scss">
+@import 'positioning';
+
+.example {
+    @include center-element; /* Example usage */
+    @include pseudo-element(relative, 'Before', #3498db); /* Example usage */
+}
+            </code>
+        </pre>
+    </div>
+
+    <!-- Font Mixins -->
+    <div id="fonts" class="section">
+        <h2 class="text-xl font-semibold">Font Mixins</h2>
+        <p class="mt-2">Mixins for font face imports.</p>
+        <pre>
+                <code class="language-scss">
+@import 'fonts';
+
+.example {
+    @include font-face('CustomFont', 'fonts/custom-font', 400, normal); /* Example usage */
+}
+                </code>
+            </pre>
+    </div>
+
+    <!-- Media Queries Mixins -->
+    <div id="media-queries" class="section">
+        <h2 class="text-xl font-semibold">Media Queries Mixins</h2>
+        <p class="mt-2">Mixins for creating responsive media queries.</p>
+        <pre>
+            <code class="language-scss">
+.foo {
+    @include screen(large) {
+        width: 20%;
+    }
+    @include screen(med) {
+        width: 40%;
+    }
+    @include screen(med-small) {
+        width: 60%;
+    }
+    @include screen(small) {
+        width: 80%;
+    }
+    @include screen(custom, max, 400) {
+        width: 100%;
+    }
+}
+            </code>
+        </pre>
+    </div>
+</div>
+
+</body>
+</html>

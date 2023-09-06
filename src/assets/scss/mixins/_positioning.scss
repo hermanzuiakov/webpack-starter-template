@@ -1,0 +1,12 @@
+@mixin center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin pseudo-element($position, $content, $bg-color) {
+  content: $content;
+  position: $position;
+  background-color: $bg-color;
+}

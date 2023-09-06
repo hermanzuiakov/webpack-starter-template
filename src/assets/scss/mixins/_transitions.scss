@@ -1,0 +1,11 @@
+@mixin transition($property, $duration) {
+  transition: $property $duration ease;
+}
+
+@mixin height-transition($duration) {
+  @include transition(max-height, $duration);
+}
+
+@mixin width-transition($duration) {
+  @include transition(max-width, $duration);
+}

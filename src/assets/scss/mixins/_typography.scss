@@ -1,0 +1,20 @@
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+@mixin text-color($color) {
+  color: $color;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size-rem($size) {
+  font-size: calculateRem($size);
+}
