@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')["BundleAnalyzerPlugin"];
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')['BundleAnalyzerPlugin'];
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -83,9 +83,15 @@ module.exports = {
             filename: 'docs.html',
             template: 'src/docs.html',
         }),
+        /*new StyleLintPlugin({
+            configFile: '.stylelintrc',
+            files: 'src/!**!/!*.scss',
+            failOnError: true,
+            quiet: true,
+        }),*/
         // Extract CSS into separate files in production mode
         new MiniCssExtractPlugin({
-            filename: 'assets/css/[name][contenthash].css',
+            filename: 'assets/css/[name].css',
         }),
         // Clean the output directory before each build
         new CleanWebpackPlugin(),

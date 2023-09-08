@@ -1,8 +1,7 @@
-@import '/node_modules/modern-normalize/modern-normalize.css';
-
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "/node_modules/modern-normalize/modern-normalize.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "/node_modules/bootstrap/scss/functions";
@@ -22,6 +21,7 @@
 
 // 6. Optionally include any other parts as needed
 @import "/node_modules/bootstrap/scss/utilities";
+
 // @import "/node_modules/bootstrap/scss/reboot";
 // @import "/node_modules/bootstrap/scss/type";
 @import "/node_modules/bootstrap/scss/images";
@@ -31,7 +31,6 @@
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "/node_modules/bootstrap/scss/utilities/api";
-
 @import "/node_modules/highlight.js/styles/atom-one-dark.css";
 
 /* Add your styles here */

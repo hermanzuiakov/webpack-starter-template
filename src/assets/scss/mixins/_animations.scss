@@ -6,6 +6,7 @@
   0%, 100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -19,9 +20,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
@@ -35,9 +38,11 @@
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(50px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -51,6 +56,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -64,32 +70,34 @@
   0% {
     background-color: #3498db;
   }
+
   100% {
     background-color: #e74c3c;
   }
 }
 
 @mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
+  @keyframes #{$animation-name} {
     @content;
   }
-  @-moz-keyframes #{$animation-name} {
+
+  @keyframes #{$animation-name} {
     @content;
   }
-  @-ms-keyframes #{$animation-name} {
+
+  @keyframes #{$animation-name} {
     @content;
   }
-  @-o-keyframes #{$animation-name} {
+
+  @keyframes #{$animation-name} {
     @content;
   }
+
   @keyframes #{$animation-name} {
     @content;
   }
 }
+
 @mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
   animation: #{$str};
 }
