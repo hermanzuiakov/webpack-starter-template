@@ -1,4 +1,3 @@
-// Import all mixins
 @import "mixins/index";
 
 body {
@@ -35,14 +34,14 @@ html {
 }
 
 .section h2 {
-  color: #fff;
+  color: #ffffff;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .section p {
   margin-top: 5px;
-  color: #fff;
+  color: #ffffff;
 }
 
 code {
@@ -71,7 +70,7 @@ code {
 }
 
 .nav a {
-  color: #fff;
+  color: #ffffff;
   margin: 0 10px;
   font-weight: bold;
   text-decoration: underline;
