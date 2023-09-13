@@ -4,6 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')['BundleAnalyzerPlugin'];
+const WorkboxPlugin = require('workbox-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -71,6 +73,11 @@ module.exports = {
             }
         ],
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
     plugins: [
         // Generate HTML file with injected assets
         new HtmlWebpackPlugin({
@@ -83,12 +90,12 @@ module.exports = {
             filename: 'docs.html',
             template: 'src/docs.html',
         }),
-        /*new StyleLintPlugin({
+        new StyleLintPlugin({
             configFile: '.stylelintrc',
-            files: 'src/!**!/!*.scss',
+            files: 'src/**/*.scss',
             failOnError: true,
             quiet: true,
-        }),*/
+        }),
         // Extract CSS into separate files in production mode
         new MiniCssExtractPlugin({
             filename: 'assets/css/[name].css',
@@ -100,6 +107,10 @@ module.exports = {
             patterns: [
                 { from: 'src/assets', to: 'assets' },
             ],
+        }),
+        new WorkboxPlugin.GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true,
         }),
         // Analyze the bundle size
         new BundleAnalyzerPlugin(),
