@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "webpack serve --open",
     "build": "webpack",
-    "lint": "eslint . && stylelint 'path-to-your-styles/**/*.scss' --syntax scss"
+    "lint": "eslint . && stylelint 'src/**/*.scss' --syntax scss"
   },
   "devDependencies": {
     "@babel/core": "^7.22.15",
